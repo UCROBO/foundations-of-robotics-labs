@@ -1,6 +1,6 @@
 # Copyright (c) Jupyter Development Team.
 # Distributed under the terms of the Modified BSD License.
-# WSL version — for import into Windows Subsystem for Linux- Updated by Sharmelle
+# WSL version — for import into Windows Subsystem for Linux - Updated by Sharmelle
 FROM ros:jazzy-ros-base
 
 ARG NB_USER="frlab"
@@ -26,14 +26,13 @@ RUN apt-get update && \
     git \
     curl \
     wget \
-    ros-jazzy-rviz2 \
-    ros-jazzy-rqt \
-    ros-jazzy-rqt-common-plugins \
-    ros-jazzy-turtlesim \
-    ros-jazzy-turtlebot3 \
-    ros-jazzy-turtlebot3-cartographer \
-    ros-jazzy-turtlebot3-teleop \
-    ros-jazzy-turtlebot3-gazebo && \
+    ros-jazzy-desktop \
+    ros-jazzy-moveit \
+    ros-jazzy-navigation2 \
+    ros-jazzy-nav2-bringup \
+    ros-jazzy-slam-toolbox \
+    ros-jazzy-rmw-cyclonedds-cpp \
+    ros-jazzy-rmw-fastrtps-cpp && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # set up environment variables
